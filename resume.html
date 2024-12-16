@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portrait Resume Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+   
+
+    <div class="container">
+
+        <!-- Form Section -->
+        <div class="form-container">
+            <h2>Fill in Your Information</h2>
+            
+            <form id="resumeForm">
+                <!-- Profile Image Upload -->
+                <div class="form-field">
+                    <label for="profileImage">Upload Profile Image</label>
+                    <input type="file" id="profileImage" name="profileImage" accept="image/*" required>
+                </div>
+
+                <!-- Full Name -->
+                <div class="form-field">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Email -->
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-field">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <!-- Address -->
+                <div class="form-field">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
+                </div>
+
+                <!-- Work Experience -->
+                <div class="form-field">
+                    <label for="workExperience">Work Experience</label>
+                    <textarea id="workExperience" name="workExperience" placeholder="Describe your work experience" rows="4" required></textarea>
+                </div>
+
+                <!-- Education -->
+                <div class="form-field">
+                    <label for="education">Education</label>
+                    <textarea id="education" name="education" placeholder="Describe your educational background" rows="4" required></textarea>
+                </div>
+
+                <!-- Skills -->
+                <div class="form-field">
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" name="skills" placeholder="List your skills" rows="4" required></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-field">
+                    <button type="submit">Generate CV</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Generated CV Output Section -->
+        <div id="cvOutput" class="cv-container">
+            <!-- Generated CV will appear here -->
+        </div>
+
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>

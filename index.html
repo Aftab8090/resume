@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resume</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 40px;
+        }
+
+        /* Left Section: Personal Info and Image */
+        .left {
+            flex: 1 1 320px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .left img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .left p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #333;
+        }
+
+        /* Right Section: Education, Work, Skills */
+        .right {
+            flex: 2 1 600px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .right h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+            text-transform: uppercase;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .right ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .right ul li {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .right ul li::before {
+            content: "•";
+            margin-right: 10px;
+            color: #4CAF50;
+        }
+
+        .right .section-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2e2e2e;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        /* Skill Section Hidden by Default */
+        .skills-section {
+            display: none;
+        }
+
+        /* Button Styling */
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .button:focus {
+            outline: none;
+        }
+
+        /* Anchor Button Styling for Create Resume */
+        .create-resume-button {
+            text-decoration: none;
+            color: white;
+        }
+
+        .create-resume-button:hover {
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .left, .right {
+                width: 100%;
+                margin-bottom: 30px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Left Section: Profile Picture, Name, Contact Info -->
+        <div class="left">
+            <img src="./image/image.jpeg" alt="Profile Picture">
+            <h1>Aftab Awan</h1>
+            <p>Full Stack Developer</p>
+
+            <div class="contact-info">
+                <p><strong>Email:</strong> aftabawan3729@example.com</p>
+                <p><strong>Phone:</strong> +123 456 789</p>
+                <p><strong>Website:</strong> <a href="https://aftabawan.com" target="_blank">aftabawan.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/aftabawan" target="_blank">linkedin.com/in/aftabawan</a></p>
+            </div>
+
+            <!-- Create Resume Button with Anchor Tag -->
+            <a href="resume.html" class="create-resume-button">
+                <button class="button">Create Resume</button>
+            </a>
+        </div>
+
+        <!-- Right Section: Education, Work, Skills -->
+        <div class="right">
+            <!-- Education Section -->
+            <div>
+                <h2 class="section-title">Education</h2>
+                <ul>
+                    <li>Master's in Computer Science - XYZ University (2020-2022)</li>
+                    <li>Bachelor's in Computer Science - ABC University (2016-2020)</li>
+                </ul>
+            </div>
+
+            <!-- Work Experience Section -->
+            <div>
+                <h2 class="section-title">Work Experience</h2>
+                <ul>
+                    <li>Software Developer - Company ABC (2022-Present)</li>
+                    <li>Intern - Tech Solutions Ltd. (2020-2021)</li>
+                </ul>
+            </div>
+
+            <!-- Skills Section -->
+            <div>
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-section" id="skillsSection">
+                    <ul>
+                        <li>JavaScript, HTML, CSS</li>
+                        <li>React, Node.js</li>
+                        <li>SQL, MongoDB</li>
+                        <li>Git, Agile</li>
+                    </ul>
+                </div>
+                <button class="button" id="toggleSkillsButton">Toggle Skills</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Compiled JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>
